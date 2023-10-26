@@ -13,7 +13,7 @@ public class Aulas implements Serializable {
 
     private String nome;
 
-    private String professor;
+    private int professor;
 
     private int sala;
 
@@ -24,11 +24,20 @@ public class Aulas implements Serializable {
     public Aulas() {
     }
 
-    public Aulas(String professor, int sala, int turno, int dia) {
+    public Aulas(String nome, int professor, int sala, int turno, int dia) {
+        this.nome = nome;
         this.sala = sala;
         this.professor = professor;
         this.turno = turno;
         this.dia = dia;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public int getSala() {
@@ -47,11 +56,11 @@ public class Aulas implements Serializable {
         this.nome = nome;
     }
 
-    public String getProfessor() {
+    public int getProfessor() {
         return professor;
     }
 
-    public void setProfessor(String professor) {
+    public void setProfessor(int professor) {
         this.professor = professor;
     }
 
