@@ -13,23 +13,21 @@ public class Aulas implements Serializable {
 
     private String nome;
 
-    private int sala;
-
     private String professor;
 
-    @ManyToOne
-    private Horarios horario;
+    private int sala;
 
-    @ManyToOne
-    private Dias dia;
+    private int dia;
 
-    public Aulas(){
+    private int turno;
+
+    public Aulas() {
     }
 
-    public Aulas(String professor, int sala, Horarios horario, Dias dia) {
+    public Aulas(String professor, int sala, int turno, int dia) {
         this.sala = sala;
         this.professor = professor;
-        this.horario = horario;
+        this.turno = turno;
         this.dia = dia;
     }
 
@@ -57,20 +55,20 @@ public class Aulas implements Serializable {
         this.professor = professor;
     }
 
-    public Horarios getHorario() {
-        return horario;
+    public int getTurno() {
+        return turno;
     }
 
-    public void setHorario(Horarios horario) {
-        this.horario = horario;
+    public void setTurno(int turno) {
+        this.turno = turno;
     }
 
-    public Dias getDia() {
+    public int getDia() {
         return dia;
     }
 
-    public void setDia(Dias dia) {
+    public void setDia(int dia) {
         this.dia = dia;
     }
-    
+
 }
